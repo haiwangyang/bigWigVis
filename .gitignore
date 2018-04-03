@@ -1,3 +1,13 @@
+# my folder
+bigWigVis/genepred/
+bigWigVis/bed/
+bigWigVis/pdf/
+bigWigVis/track/
+bigWigVis/species/
+bigWigVis/output/
+bigWigVis/data/
+bigWigVis/strandness/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
