@@ -14,6 +14,6 @@ In bigWigVis/bigWigVis folder<br>
 (4) modify track files (i.e., color, title, and etc)<br>
 ./modify_track_for_species.py<br>
 <br>
-(4) test pyGenomeTrack command<br>
+(5) test pyGenomeTrack command<br>
     ./test_pyGenomeTracks.sh<br>
 <br>
