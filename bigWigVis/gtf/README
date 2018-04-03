@@ -1,8 +1,8 @@
 # ln -s YO.gtf
 for i in /data/yangh13/PGMF/PGMF/data/annotation/YOID/*.YO.gtf; do ln -s $i; done
-ln -s dmel.YO.gtf w1118.v3.gtf
-ln -s dmel.YO.gtf oreR.v3.gtf
-ln -s dgri.YO.gtf dgriG1.v3.gtf
+ln -s dmel.YO.gtf w1118.YO.gtf
+ln -s dmel.YO.gtf oreR.YO.gtf
+ln -s dgri.YO.gtf dgriG1.YO.gtf
 
 
 # ln -s FB.gtf
