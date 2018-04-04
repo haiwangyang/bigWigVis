@@ -17,8 +17,10 @@ In bigWigVis/bigWigVis folder<br>
 (5) test pyGenomeTrack command<br>
     ./test_pyGenomeTracks.sh<br>
 <br>
-(6) generate generate_track cmd (to run the cmd add "| bash")<br>
-python3 generate_pyGenomeTracks_cmd.py fne<br>
+(6) generate generate_track cmd and run<br>
+p3 generate_pyGenomeTracks_cmd.py Yp1 10000000 >cmd/Yp1.sh<br>
+chmod u+x cmd/Yp1.sh<br>
+./cmd/Yp1.sh<br>
 <br>
 output:<br>
 pyGenomeTracks --tracks track/w1118.forward.1.ini --region X:12917477-12950422 --outFileName pdf/fne.w1118.pdf
@@ -31,4 +33,7 @@ pyGenomeTracks --tracks track/w1118.forward.1.ini --region X:12917477-12950422 -
 <br>pyGenomeTracks --tracks track/dvir.reverse.1.ini --region scaffold_12928:4482025-4510194 --outFileName pdf/fne.dvir.pdf
 <br>pyGenomeTracks --tracks track/dgri.reverse.1.ini --region scaffold_14853:1129804-1139248 --outFileName pdf/fne.dgri.pdf
 <br>
-(7) merge 
+(7) merge pdf of all 8 species for one gene<br>
+python3 combine_pdf.py Yp1<br>
+<br>
+

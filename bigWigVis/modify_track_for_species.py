@@ -8,22 +8,46 @@ from shared_info import get_lines, SharedInfo
 (4) make title shorter, e.g., title = w1118_f_ac.forward => title = w1118_f_ac
 """
 
+def replace(line, a, b):
+    """ 
+    if line starts with string a, then
+    replace string a with string b in line
+    """
+    mline = line
+    if line.startswith(a):
+        mline = line.replace(a,b)
+    return(mline)
+
 class Track():
     """ Track object """
-    def __init__(self, species, strandness):
+    def __init__(self, species, strandness, maxexp):
         self.species = species
         self.strandness = strandness
+        self.maxexp = maxexp
         self.filepath = "track/" + self.species + "." + self.strandness + ".ini"
         self.lines = get_lines(self.filepath)
         self.mlines = self.get_modified_lines()
-
+        
     def get_modified_lines(self):
         """ modify track files """
         mlines = []
         sex = ""
         for line in self.lines:
-            if line.startswith("color = darkblue"):
-                mlines.append(line.replace("darkblue","darkgreen"))
+            if line.startswith("#fontsize=20"):
+                mlines.append(line.replace("#fontsize=20","fontsize=5"))
+
+            elif line.startswith("#line width = 0.5"):
+                mlines.append(line.replace("#line width = 0.5","line width = 5"))
+
+            elif line.startswith("labels = off"):
+                mlines.append(line.replace("labels = off","labels = on"))
+
+            elif line.startswith("color = darkblue"):
+                mlines.append(line.replace("color = darkblue","color = grey"))
+
+            elif line.startswith("#style = flybase"):
+                mlines.append(line.replace("#style = flybase", "style = flybase"))
+
             elif line.startswith("title"):
                 if "forward" in line:
                     mlines.append(line.replace(".forward", "(+)"))
@@ -31,9 +55,11 @@ class Track():
                     mlines.append(line.replace(".reverse", "(-)"))
                 else:
                     mlines.append(line)
+
             elif line.startswith("file=bw"):
                 sex = line.split("_")[1]
                 mlines.append(line)
+            
             elif line.startswith("color = #666666"):
                 if sex == "f":
                     mlines.append(line.replace("#666666", "red"))
@@ -41,23 +67,31 @@ class Track():
                     mlines.append(line.replace("#666666", "blue"))
                 else:
                     mlines.append(line)
+            
+            elif line.startswith("#max_value = auto"):
+                mlines.append(line.replace("#max_value = auto", "max_value = " + self.maxexp))
+            
+            elif line.startswith("number of bins = 500"):
+                mlines.append(line.replace("number of bins = 500", "number of bins = 500"))
+            
             else:
                 mlines.append(line)
         return(mlines)
 
     def print_mlines(self):
-        with open(self.filepath.replace(".ini", ".1.ini"), "w") as f:
+        with open(self.filepath.replace(".ini", "." + self.maxexp + ".ini"), "w") as f:
             for mline in self.mlines:
                 f.write(mline)
-        print(self.filepath.replace(".ini", ".1.ini") + " file generated")
+        print(self.filepath.replace(".ini", "." + self.maxexp + ".ini") + " file generated")
 
 def main():
     si = SharedInfo()
 
     for s in si.species:
         for d in si.strandness: # call it direction to avoid confusion for "s"
-            t = Track(s, d)
-            t.print_mlines()
+            for m in ['1000', '10000', '100000', '1000000', '10000000']: # maxexp for bigWig track
+                t = Track(s, d, m)
+                t.print_mlines()
 
 if __name__ == '__main__':
     main()
