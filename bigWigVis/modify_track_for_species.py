@@ -9,7 +9,7 @@ from shared_info import get_lines, SharedInfo
 """
 
 class Track():
-    """  object """
+    """ Track object """
     def __init__(self, species, strandness):
         self.species = species
         self.strandness = strandness

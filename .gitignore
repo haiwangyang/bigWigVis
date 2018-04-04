@@ -8,6 +8,8 @@ bigWigVis/tissue/
 bigWigVis/strandness/
 bigWigVis/output/
 bigWigVis/data/
+bigWigVis/cluster/
+bigWigVis/ortholog/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
