@@ -11,12 +11,22 @@ si = SharedInfo()
 
 # ortholog info
 o = OrthologInfo()
-ortho_dct = o.ortho_dct["Yp1"]
+ortho_dct = o.ortho_dct[gene]
 
 for species in si.species:
-    print(species)
     g = GtfInfo(species)
     YOID = ortho_dct[species]
     gid2range = g.gid2range[YOID]
-    print(gid2range)
+    scaffold = list(gid2range.keys())[0]
+    info = gid2range[scaffold]
+    start = info['min']
+    end = info['max']
+    strand = info['strand']
+    if strand == "+":
+        direction = "forward"
+    elif strand == "-":
+        direction = "reverse"
+
+    print("pyGenomeTracks --tracks track/" + species + "." + direction + ".1.ini --region " + scaffold + ":" + str(start) + "-" + str(end) + " --outFileName pdf/" + gene + "." + species + ".pdf")
+
 
