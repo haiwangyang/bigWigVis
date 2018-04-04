@@ -3,8 +3,8 @@ import sys
 from shared_info import get_elements
 gene = sys.argv[1]
 
-width = "40cm"
-height = "10cm"
+width = "80cm"
+height = "40cm"
 
 offset = 120
 shrink = 0.4
