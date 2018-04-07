@@ -1,4 +1,6 @@
 # generate exon.gtf
+# ucsc tools need to be installed
+# here I use biowulf cluster to do the convertion
 module load ucsc/360
 for i in gtf/*.gtf; do
     echo $i

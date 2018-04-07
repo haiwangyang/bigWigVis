@@ -5,6 +5,10 @@ Visualize bigWig files of RNA-seq data (supported by pyGenomeTracks)<br>
 In bigWigVis/bigWigVis folder<br>
 <br>
 (1) put gtf files in gtf<br>
+FlyBase annotations are available:<br>
+ftp://ftp.flybase.net/releases/FB2017_03<br>
+Updated annotations are available:<br>
+https://doi.org/10.6084/m9.figshare.6042005.v1<br>
 <br>
 (2) generate bed files based on gtf<br>
 ./generate_bed_from_gtf.sh<br>

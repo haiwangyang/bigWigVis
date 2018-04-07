@@ -1,4 +1,9 @@
+# given a gene and y-axis-max
 g=$1
 y=$2
-p3 generate_pyGenomeTracks_cmd.py $g $y | bash
-p3 merge_pdf.py $g
+
+# generate genome-track svg for each ortholog
+python3 generate_pyGenomeTracks_cmd.py $g $y | bash
+
+# merge svg files
+python3 merge_svg.py $g
