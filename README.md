@@ -20,8 +20,6 @@ run cmd to generate svgs for each ortholog<br>
 merge the svgs into one<br>
 ./calc_for_gene.sh CG34222 100000<br>
 <br>
-
-
+(6) the merged svg can be viewed or edited in Adobe Illustrator<br>
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/Yp1.png)
-
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/sunn.png)
