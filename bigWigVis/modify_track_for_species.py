@@ -35,7 +35,8 @@ class Track():
         for line in self.lines:
             if line.startswith("#fontsize=20"):
                 mlines.append(line.replace("#fontsize=20","fontsize=5"))
-
+            elif line.startswith("fontsize = 10"):
+                mlines.append(line.replace("fontsize=10","fontsize=30"))
             elif line.startswith("#line width = 0.5"):
                 mlines.append(line.replace("#line width = 0.5","line width = 5"))
 
@@ -49,12 +50,13 @@ class Track():
                 mlines.append(line.replace("#style = flybase", "style = flybase"))
 
             elif line.startswith("title"):
-                if "forward" in line:
-                    mlines.append(line.replace(".forward", "(+)"))
-                elif "reverse" in line:
-                    mlines.append(line.replace(".reverse", "(-)"))
-                else:
-                    mlines.append(line)
+                mlines.append(line.replace("title", "#title"))
+                #if "forward" in line:
+                #    mlines.append(line.replace(".forward", "(+)"))
+                #elif "reverse" in line:
+                #    mlines.append(line.replace(".reverse", "(-)"))
+                #else:
+                #    mlines.append(line)
 
             elif line.startswith("file=bw"):
                 sex = line.split("_")[1]
@@ -67,7 +69,9 @@ class Track():
                     mlines.append(line.replace("#666666", "blue"))
                 else:
                     mlines.append(line)
-            
+            elif line.startswith("show data range = yes"):
+                mlines.append(line.replace("show data range = yes", "show data range = no"))
+
             elif line.startswith("#max_value = auto"):
                 mlines.append(line.replace("#max_value = auto", "max_value = " + self.maxexp))
             
@@ -89,7 +93,7 @@ def main():
 
     for s in si.species:
         for d in si.strandness: # call it direction to avoid confusion for "s"
-            for m in ['1000', '10000', '100000', '1000000', '10000000']: # maxexp for bigWig track
+            for m in ['1000', '2000', '3000', '4000', '5000', '6000', '7000', '8000', '9000', '10000', '20000', '30000', '40000', '50000', '60000', '70000', '80000', '90000', '100000', '1000000', '10000000']: # maxexp for bigWig track
                 t = Track(s, d, m)
                 t.print_mlines()
 

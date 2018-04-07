@@ -29,20 +29,21 @@ si = SharedInfo()
 o = OrthologInfo()
 ortho_dct = o.ortho_dct[gene]
 
-for species in si.species:
-    g = GtfInfo(species)
-    YOID = ortho_dct[species]
-    gid2range = g.gid2range[YOID]
-    scaffold = list(gid2range.keys())[0]
-    info = gid2range[scaffold]
-    start = info['min']
-    end = info['max']
-    strand = info['strand']
-    if strand == "+":
-        direction = "forward"
-    elif strand == "-":
-        direction = "reverse"
-
-    print("pyGenomeTracks --tracks track/" + species + "." + direction + "." + maxexp + ".ini --region " + scaffold + ":" + str(start) + "-" + str(end) + " --width 10 --height 40 --dpi 100 --outFileName svg/" + gene + "." + species + ".svg")
-
-
+with open("strandness/" + gene + ".txt", "w") as f:
+    for species in si.species:
+        g = GtfInfo(species)
+        YOID = ortho_dct[species]
+        gid2range = g.gid2range[YOID]
+        scaffold = list(gid2range.keys())[0]
+        info = gid2range[scaffold]
+        start = info['min']
+        end = info['max']
+        strand = info['strand']
+        if strand == "+":
+            direction = "forward"
+        elif strand == "-":
+            direction = "reverse"
+        f.write("\t".join([species, YOID, strand]) + "\n")
+        print("pyGenomeTracks --tracks track/" + species + "." + direction + "." + maxexp + ".ini --region " + scaffold + ":" + str(start) + "-" + str(end) + " --width 10 --height 40 --dpi 100 --outFileName svg/" + gene + "." + species + ".svg")
+    
+    

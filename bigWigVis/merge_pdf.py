@@ -3,14 +3,14 @@ import sys
 from shared_info import get_elements
 gene = sys.argv[1]
 
-width = "80cm"
-height = "40cm"
+width = "50cm"
+height = "25cm"
 
-offset = 120
-shrink = 0.4
-x = 50
-y = 10
-size = 6
+offset = 60
+shrink = 0.2
+x = 20
+y = 3
+size = 5
 
 Figure(width, height, 
         Panel(
