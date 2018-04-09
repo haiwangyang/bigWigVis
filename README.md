@@ -1,7 +1,8 @@
-# bigWigVis
+# bigWigVis README
+## what is bigWigVis
 Visualize bigWig files of RNA-seq data (supported by pyGenomeTracks)<br>
 <br>
-# Tutorial
+## Tutorial
 In bigWigVis/bigWigVis folder<br>
 <br>
 (1) put gtf files in gtf<br>
