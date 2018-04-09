@@ -37,6 +37,7 @@ pyGenomeTracks --tracks track/dgri.forward.10000.ini --region scaffold_15110:167
 ./calc_for_gene.sh Eglp1 100000 &
 ./calc_for_gene.sh CG17005 100000 &
 ./calc_for_gene.sh prd 100000 &
+./calc_for_gene.sh gom 100000 &
 
 p3 generate_pyGenomeTracks_cmd.py CG2990 1000 | bash
 p3 merge_pdf.py CG2990
