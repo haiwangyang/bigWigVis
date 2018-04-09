@@ -2,7 +2,9 @@
 ## why to use bigWigVis?
 It is difficult to visualize and compare in one figure the expression of orthologs in different species, tissues, and sexes. IGV or UCSC can do the job, but so much manual works are required, considering that different species share different genome tracks and a shared y-axis is needed for different tissues/sexes. I developed bigWigVis to make it easy to visualize ortholog expression in species/tissues/sexes by just one command.<br> 
 ## what is bigWigVis?
-The bigWigVis is to visualize bigWig files for RNA-seq data (supported by pyGenomeTracks)
+The bigWigVis is to visualize bigWig files for RNA-seq data, it is a combination of python (supported by pyGenomeTracks package) and bash scripts. 
+* generate_bed_from_gtf.sh
+pyGenomeTracks will need a bed file (not gtf/gff3) to draw annotations in certain genomic region, and I generate such bed file from gtf annotation.  To make the problem simple, each species will just have one bed file, rather than many bed files for different genomic regions.
 
 ## 
 <br>
