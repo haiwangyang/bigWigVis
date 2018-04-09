@@ -21,7 +21,11 @@ A bash script to run **generate_pyGenomeTracks_cmd** and **merge_svg**, given a 
 ## What are the folders in bigWigVis?
 * All scripts and data folders are under bigWigVis/bigWigVis<br>
 * gtf/<br>
-Original annotation in gtf format
+Original annotation in gtf format<br>
+FlyBase annotations are available:<br>
+ftp://ftp.flybase.net/releases/FB2017_03<br>
+Updated annotations are available:<br>
+https://doi.org/10.6084/m9.figshare.6042005.v1<br>
 * genepred/<br>
 Intermediate folder to convert gtf to genepred to bed
 * bed/<br>
@@ -52,12 +56,9 @@ It contains summary of strandness for all orthologs for certain gene
 
 ## How to use bigWigVis?
 In bigWigVis/bigWigVis folder
-* **put gtf files in gtf**<br>
-FlyBase annotations are available:<br>
-ftp://ftp.flybase.net/releases/FB2017_03<br>
-Updated annotations are available:<br>
-https://doi.org/10.6084/m9.figshare.6042005.v1<br>
-
+* **put data in correct folders**<br>
+Required folders: gtf/, bw/, species/, tissue/, strandness/, and ortholog/<br> 
+Optional folders: expression/ and cluster/<br>
 * **generate bed files based on gtf**<br>
 ./generate_bed_from_gtf.sh<br>
 
