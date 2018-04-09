@@ -14,10 +14,10 @@
 ./calc_for_gene.sh CG34222 100000
 ./calc_for_gene.sh CG31805 50000
 ./calc_for_gene.sh CG6652 100000
-./calc_for_gene.sh Eglp1 100000 &
-./calc_for_gene.sh CG17005 100000 &
-./calc_for_gene.sh prd 100000 &
-./calc_for_gene.sh gom 100000 &
+./calc_for_gene.sh Eglp1 100000
+./calc_for_gene.sh CG17005 100000
+./calc_for_gene.sh prd 100000
+./calc_for_gene.sh gom 100000
 ./calc_for_gene.sh CG2990 1000
 ./calc_for_gene.sh CG15522 10000
 ./calc_for_gene.sh Mal-A6 10000
