@@ -1,7 +1,7 @@
 # bigWigVis README
-## why to use bigWigVis?
+## Why to use bigWigVis?
 It is difficult to visualize and compare in one figure the expression of orthologs in different species, tissues, and sexes. IGV or UCSC can do the job, but so much manual works are required, considering that different species share different genome tracks and a shared y-axis is needed for different tissues/sexes. I developed bigWigVis to make it easy to visualize ortholog expression in species/tissues/sexes by just one command.<br> 
-## what is bigWigVis?
+## What is bigWigVis?
 The bigWigVis is to visualize bigWig files for RNA-seq data, it is a combination of python (supported by pyGenomeTracks package) and bash scripts. 
 * **shared_info.py**<br>
 A python script that collect information needed for multiple downstream scripts, such as commonly used functions and possible options for species/tissues/strandness.   
@@ -31,11 +31,24 @@ BigWig files of samples<br>
 The data are available at https://doi.org/10.6084/m9.figshare.6041888.v1
 * ortholog/<br>
 It contains ortholog matrix in the file orth_8490.txt, so that I can connect gene symbol to gene id for any of the nine species.
+* species/<br>
+It contains species list under study in the file species.list.
+* tissues/<br>
+It contains tissue list under study in the file tissue.list
 * expression/<br>
 It contains max normalized read count (from DESeq2) in all tissues of D. melanogaster in the file dmel_max_expression.txt. It can help guess what y-axis-max need to be used for a certain gene.
 * cluster/<br>
 It contains kmean cluster information for sex-biased expression of orthologs in the file heatmap.sb15.txt.
 * track/<br>
+It contains template and final version of track.ini files needed for pyGenomeTracks.
+* cmd/<br>
+It contains command lines for commonly calculated genes
+* svg/<br>
+It contains individual and merged version of svg files.
+* pdf/<br>
+It contains individual and merged version of pdf files, which act as alternative format as svg.
+* strandness/<br>
+It contains summary of strandness for all orthologs for certain gene
 
 ## How to use bigWigVis?
 In bigWigVis/bigWigVis folder
