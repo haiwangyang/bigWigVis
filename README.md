@@ -12,8 +12,11 @@ The pyGenomeTracks will also need a track file to know the style and format of t
 * **modify_track_for_species.py**<br>
 I wrote the python script to modify the template track.ini generated in the previous step.  In the track.ini, titles, fonts, and colors of tracks are custormized for my project. For instance, red and blue barplots are used to denote female and male samples respectively. I also generated different versions of y-axis-max, so that in future I can use the right one for certain gene. For instance, Yp1 is a highly expressed gene (y-axis-max=10000000) while CG2990 is a lowly expressed gene (y-axis-max = 1000).
 * **generate_pyGenomeTracks_cmd.py**<br>
-Now bed and track.ini are generated from previous steps. I wrote the python script to generate pyGenomeTracks command, given a gene name (e.g., Yp1) and correct y-axis-max (e.g., 10000000). It will fetch the scaffold, strand, and position of the given gene by another script (**ortholog_info.py**).  It also generate summary of strandness of orthologs each of the nine species.
-
+Now bed and track.ini are generated from previous steps. I wrote the python script to generate pyGenomeTracks command, given a gene name (e.g., Yp1) and correct y-axis-max (e.g., 10000000). It will fetch the scaffold, strand, and position of the given gene by another script (**gtf_info.py**). It will fetch the all orthologs of the same gene by another script (**ortholog_info.py**). When running, the script will generate individual svg for each species' ortholog, as well as a summary of strandness of orthologs each of the nine species.
+* **merge_svg.py**<br>
+Now svg files of different species' orthologs are available. I wrote the python script (based on svgutils.compose package) to merge all svg of the same gene together into one svg figure.
+* **calc_for_gene.sh**<br>
+A bash script to run **generate_pyGenomeTracks_cmd** and **merge_svg**, given a gene name and y-axis-max.
 
 ## folders in bigWigVis/bigWigVis
 
