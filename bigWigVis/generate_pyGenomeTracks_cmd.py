@@ -1,26 +1,11 @@
 from __future__ import print_function, division
 from ortholog_info import OrthologInfo
-from shared_info import SharedInfo
+from shared_info import SharedInfo, get_A2B
 from gtf_info import GtfInfo
-from shared_info import get_A2B
 import sys
 
 gene = sys.argv[1]
 maxexp = sys.argv[2]
-
-# alternatively we can assign maxexp by maxnrc
-### max normalized read counts of gene in all dmel samples
-#gene2maxnrc = get_A2B("expression/dmel_max_expression.txt")
-
-#def get_maxexp(maxnrc):
-#    if maxnrc <1000:
-#        return(1000)
-#    elif maxnrc < 100000:
-#        return(10000)
-#    else
-#        return(1000000)
-
-#maxexp = gene2maxnrc(gene2maxnrc[gene])
 
 # shared info
 si = SharedInfo()

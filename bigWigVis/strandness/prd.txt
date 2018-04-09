@@ -1,0 +1,9 @@
+w1118	YOgnME02633	-
+dyak	YOgnYA02029	-
+dana	YOgnAN03435	+
+dpse	YOgnPS07309	+
+dper	YOgnPE16807	-
+dwil	YOgnWI09396	-
+dmoj	YOgnMO07320	-
+dvir	YOgnVI07821	-
+dgri	YOgnGR15335	-
