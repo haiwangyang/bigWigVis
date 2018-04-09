@@ -9,6 +9,9 @@ The pyGenomeTracks will need a bed file (not gtf/gff3) to draw annotations in ce
 The pyGenomeTracks will also need a track file to know the style and format of the vector figures (such as svg). It uses the make_tracks_file command to do the job.  I wrote a bash script to generate make_tracks_file commands, which further generate template track.ini files.  We call these track.ini files template, because all parameters in the track.ini are default and to achieve custermized illustration, a lot of them need to be modified.
 * **modify_track_for_species.py**<br>
 I wrote the python script to modify the template track.ini generated in the previous step.  In the track.ini, titles, fonts, and colors of tracks are custormized for my project. For instance, red and blue barplots are used to denote female and male samples respectively. I also generated different versions of y-axis-max, so that in future I can use the right one for certain gene. For instance, Yp1 is a highly expressed gene (y-axis-max=10000000) while CG2990 is a lowly expressed gene (y-axis-max = 1000).
+* **generate_pyGenomeTracks_cmd.py**<br>
+Now bed and track.ini are generated from previous steps. I wrote the python script to generate pyGenomeTracks command, given a gene name (e.g., Yp1) and correct y-axis-max (e.g., 10000000). It will fetch the scaffold, strand, and position of the given gene by another script (**ortholog_info.py**).  It also generate summary of strandness of orthologs each of the nine species.
+
 
 ## folders in bigWigVis/bigWigVis
 
