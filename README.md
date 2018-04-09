@@ -18,9 +18,26 @@ Now svg files of different species' orthologs are available. I wrote the python 
 * **calc_for_gene.sh**<br>
 A bash script to run **generate_pyGenomeTracks_cmd** and **merge_svg**, given a gene name and y-axis-max.
 
-## folders in bigWigVis/bigWigVis
+## What are the folders in bigWigVis?
+* All scripts and data folders are under bigWigVis/bigWigVis<br>
+* gtf/<br>
+Original annotation in gtf format
+* genepred/<br>
+Intermediate folder to convert gtf to genepred to bed
+* bed/<br>
+Final annotation in bed format
+* bw/<br>
+BigWig files of samples<br>
+The data are available at https://doi.org/10.6084/m9.figshare.6041888.v1
+* ortholog/<br>
+It contains ortholog matrix in the file orth_8490.txt, so that I can connect gene symbol to gene id for any of the nine species.
+* expression/<br>
+It contains max normalized read count (from DESeq2) in all tissues of D. melanogaster in the file dmel_max_expression.txt. It can help guess what y-axis-max need to be used for a certain gene.
+* cluster/<br>
+It contains kmean cluster information for sex-biased expression of orthologs in the file heatmap.sb15.txt.
+* track/<br>
 
-## Tutorial
+## How to use bigWigVis?
 In bigWigVis/bigWigVis folder
 * **put gtf files in gtf**<br>
 FlyBase annotations are available:<br>
