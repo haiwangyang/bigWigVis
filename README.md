@@ -59,6 +59,7 @@ In bigWigVis/bigWigVis folder
 * **put data in correct folders**<br>
 Required folders: gtf/, bw/, species/, tissue/, strandness/, and ortholog/<br> 
 Optional folders: expression/ and cluster/<br>
+
 * **generate bed files based on gtf**<br>
 ./generate_bed_from_gtf.sh<br>
 
@@ -68,11 +69,9 @@ Optional folders: expression/ and cluster/<br>
 * **modify track files (i.e., color, title, and etc)**<br>
 ./modify_track_for_species.py<br>
 
-* **given gene and y-axis-max generate pyGenomeTracks cmd**<br>
-run cmd to generate svgs for each ortholog<br>
-merge the svgs into one<br>
+* **given gene and y-axis-max generate merged svg for all orthologs**<br>
 ./calc_for_gene.sh CG34222 100000<br>
 
-* **the merged svg can be viewed or edited in Adobe Illustrator**<br>
+* **the merged svg can be viewed or edited in Adobe Illustrator, such as**<br>
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/Yp1.png)
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/sunn.png)
