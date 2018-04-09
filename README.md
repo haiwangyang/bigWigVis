@@ -70,7 +70,7 @@ Optional folders: expression/ and cluster/<br>
 ./modify_track_for_species.py<br>
 
 * **given gene and y-axis-max generate merged svg for all orthologs**<br>
-./calc_for_gene.sh CG34222 100000<br>
+./calc_for_gene.sh Yp1 10000000<br>
 
 * **the merged svg can be viewed or edited in Adobe Illustrator, such as**<br>
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/Yp1.png)
