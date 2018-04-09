@@ -1,7 +1,7 @@
 # bigWigVis README
 ## Why to use bigWigVis?
 It is difficult to visualize and compare in one figure the expression of orthologs in different species, tissues, and sexes. IGV or UCSC can do the job, but so much manual works are required, considering that different species share different genome tracks and a shared y-axis is needed for different tissues/sexes. I developed bigWigVis to make it easy to visualize ortholog expression in species/tissues/sexes by just one command.<br> 
-## What is bigWigVis?
+## What are the scripts in bigWigVis?
 The bigWigVis is to visualize bigWig files for RNA-seq data, it is a combination of python (supported by pyGenomeTracks package) and bash scripts. 
 * **shared_info.py**<br>
 A python script that collect information needed for multiple downstream scripts, such as commonly used functions and possible options for species/tissues/strandness.   
