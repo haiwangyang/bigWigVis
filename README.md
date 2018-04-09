@@ -19,7 +19,6 @@ FlyBase annotations are available:<br>
 ftp://ftp.flybase.net/releases/FB2017_03<br>
 Updated annotations are available:<br>
 https://doi.org/10.6084/m9.figshare.6042005.v1<br>
-<br>
 * **generate bed files based on gtf**<br>
 ./generate_bed_from_gtf.sh<br>
 <br>
