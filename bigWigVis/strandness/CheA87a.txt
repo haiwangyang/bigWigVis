@@ -1,9 +1,0 @@
-w1118	YOgnME10650	+
-dyak	YOgnYA09670	+
-dana	YOgnAN12289	+
-dpse	YOgnPS02494	-
-dper	YOgnPE00636	+
-dwil	YOgnWI12947	+
-dmoj	FBgn0147058	+
-dvir	FBgn0197701	-
-dgri	YOgnGR02702	+
