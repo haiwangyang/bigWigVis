@@ -2,8 +2,8 @@
 bigWigVis/genepred/
 bigWigVis/bed/
 bigWigVis/pdf/
-bigWigVis/gtf/
-bigWigVis/bw/
+bigWigVis/gtf/*.gtf
+bigWigVis/bw/*.bw
 bigWigVis/track/
 bigWigVis/strandness/*.txt
 bigWigVis/expression/
