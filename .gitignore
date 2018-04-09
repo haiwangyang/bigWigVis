@@ -3,11 +3,7 @@ bigWigVis/genepred/
 bigWigVis/bed/
 bigWigVis/pdf/
 bigWigVis/track/
-bigWigVis/species/
-bigWigVis/tissue/
-bigWigVis/strandness/
 bigWigVis/output/
-bigWigVis/data/
 bigWigVis/cluster/
 bigWigVis/ortholog/
 bigWigVis/svg/
