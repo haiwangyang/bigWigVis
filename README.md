@@ -12,7 +12,6 @@ I wrote the python script to modify the template track.ini generated in the prev
 
 ## folders in bigWigVis/bigWigVis
 
-<br>
 ## Tutorial
 In bigWigVis/bigWigVis folder
 * put gtf files in gtf<br>
