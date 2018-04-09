@@ -19,20 +19,21 @@ FlyBase annotations are available:<br>
 ftp://ftp.flybase.net/releases/FB2017_03<br>
 Updated annotations are available:<br>
 https://doi.org/10.6084/m9.figshare.6042005.v1<br>
+
 * **generate bed files based on gtf**<br>
 ./generate_bed_from_gtf.sh<br>
-<br>
+
 * **generate track files for each species**<br>
 ./generate_track_for_species.sh<br>
-<br>
+
 * **modify track files (i.e., color, title, and etc)**<br>
 ./modify_track_for_species.py<br>
-<br>
+
 * **given gene and y-axis-max generate pyGenomeTracks cmd**<br>
 run cmd to generate svgs for each ortholog<br>
 merge the svgs into one<br>
 ./calc_for_gene.sh CG34222 100000<br>
-<br>
+
 * **the merged svg can be viewed or edited in Adobe Illustrator**<br>
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/Yp1.png)
 ![alt text](https://s3.us-east-2.amazonaws.com/haiwangyang.com/image/sunn.png)
