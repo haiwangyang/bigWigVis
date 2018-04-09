@@ -6,6 +6,7 @@ bigWigVis/gtf/
 bigWigVis/bw/
 bigWigVis/track/
 bigWigVis/strandness/*.txt
+bigWigVis/expression/
 bigWigVis/output/
 bigWigVis/cluster/
 bigWigVis/ortholog/
